@@ -18,3 +18,31 @@ Standalone: https://regensburg.freifunk.net/meshviewer/
 - [POEditor](https://poeditor.com/join/project/VZBjPNNic9) for providing an easy non-developer translation environment
 
 These tools need a lot of infrastructures and provide a free account for open source software.
+
+## Building / Running
+
+Required tools:
+* yarn
+* gulp
+
+Install the dependencies by running
+```
+yarn
+```
+
+Copy the example config and edit it to your needs
+```
+cp config.js.example config.js
+```
+
+Then you can start a development server with
+```
+gulp serve
+```
+
+To build a release, run
+```
+gulp
+```
+
+The result will be in the "build" folder afterwards.
