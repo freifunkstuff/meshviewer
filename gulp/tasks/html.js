@@ -22,29 +22,17 @@ module.exports = function (gulp, plugins, config, env) {
     return gulp.src(env.production() ? config.build + '/*.html' : 'html/*.html')
       .pipe(plugins.realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(config.faviconData)).favicon.html_code))
       .pipe(env.production(plugins.inlineSource({ compress: false })))
-      .pipe(plugins.inject(gulp.src(['config.js']), {
+      .pipe(plugins.inject(gulp.src(['config.default.js']), {
         removeTags: true,
-        starttag: '<!-- inject:config -->',
+        starttag: '<!-- inject:defaultconfig -->',
         transform: function () {
           delete require.cache[require.resolve('../../config.default')];
-          delete require.cache[require.resolve('../../config')];
-          var buildConfig = Object.assign({}, require('../../config.default')(), require('../../config')());
-          return '<title>' + buildConfig.siteName + ' - loading...</title>' +
-            '<script>window.config =' +
-            stringify(buildConfig)
+          var defaultConfig = require('../../config.default')();
+          return '<script>window.config =' +
+            stringify(defaultConfig)
               .replace('<!-- inject:cache-breaker -->',
                 Math.random().toString(12).substring(7)) +
             ';</script>';
-        }
-      }))
-      .pipe(plugins.inject(gulp.src(['config.js']), {
-        removeTags: true,
-        starttag: '<!-- inject:title -->',
-        transform: function () {
-          delete require.cache[require.resolve('../../config.default')];
-          delete require.cache[require.resolve('../../config')];
-          var buildConfig = Object.assign({}, require('../../config.default')(), require('../../config')());
-          return buildConfig.siteName;
         }
       }))
       .pipe(plugins.cacheBust({
