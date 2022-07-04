@@ -58,7 +58,7 @@ Object.assign(window.config, {
     'https://regensburg.freifunk.net/data/'
   ],
   // show router hardware images
-  'hwImg': 'https://cdn.rawgit.com/Moorviper/meshviewer_hwpics/master/nodes/{MODELHASH}.svg',
+  'hwImg': 'https://cdn.rawgit.com/Moorviper/meshviewer_hwpics/master/nodes/{MODEL_HASH}.svg',
   'siteName': 'Freifunk Regensburg',
   'mapLayers': [
     {
