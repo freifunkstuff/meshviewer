@@ -57,6 +57,8 @@ Object.assign(window.config, {
   'dataPath': [
     'https://regensburg.freifunk.net/data/'
   ],
+  // show router hardware images
+  'hwImg': 'https://cdn.rawgit.com/Moorviper/meshviewer_hwpics/master/nodes/{MODELHASH}.svg',
   'siteName': 'Freifunk Regensburg',
   'mapLayers': [
     {
