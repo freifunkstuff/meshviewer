@@ -19,6 +19,10 @@ module.exports = function () {
         'value': 'Gateway'
       },
       {
+        'name': 'node.contact',
+        'value': 'contact'
+      },
+      {
         'name': 'node.coordinates',
         'value': 'GeoURI'
       },
