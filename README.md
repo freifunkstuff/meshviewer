@@ -5,6 +5,20 @@
 
 Meshviewer is an online visualization app to represent nodes and links on a map for Freifunk open mesh network.
 
+## Running with Docker
+
+* copy the example config and modify it to your needs
+* Run the following docker command. The config must be mounted into the docker container
+
+```
+docker run -d \
+  --mount type=bind,source="$(pwd)/config.js",target=/usr/share/nginx/html/config.js \
+  -p 8088:80 \
+  --name meshviewer \
+  ghcr.io/freifunkstuff/meshviewer:master
+```
+
+
 ### Demo
 
 Embedded: https://regensburg.freifunk.net/netz/karte/  
