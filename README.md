@@ -12,7 +12,7 @@ This is a fork of the original FFRGB Meshviewer with a more community friendly d
 Changelog from the original development:
 * externalized config to decouple development from community configuration
 * embedding in IFrame with working deep-links in both directions (cross-domain, using postMessage)
-* available as docker container
+* available as docker container (automatically built with github actions)
 * support for hardware images (like hopglass)
 * much better handling for wrong/missing data in json
 * better router regexp that allows alphanumeric node ids (not limited to exactly 12 hex digits anymore)
@@ -34,17 +34,8 @@ docker run -d \
 
 ### Demo
 
-Embedded: https://regensburg.freifunk.net/netz/karte/  
-Standalone: https://regensburg.freifunk.net/meshviewer/
-
-## Sponsoring / Supporting
-
-- [BrowserStack](https://www.browserstack.com/) for providing an awesome testing service for hundreds of browsers
-- [Travis CI](https://travis-ci.com/) for building meshviewer on every push and pull request
-- [Scrutinizer CI](https://scrutinizer-ci.com/g/ffrgb/meshviewer/) for testing code quality on every push and pull request
-- [POEditor](https://poeditor.com/join/project/VZBjPNNic9) for providing an easy non-developer translation environment
-
-These tools need a lot of infrastructures and provide a free account for open source software.
+Embedded: https://freifunk-leipzig.de/map/
+Standalone: https://karte.freifunk-leipzig.de/
 
 ## Building / Running
 
