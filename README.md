@@ -5,6 +5,19 @@
 
 Meshviewer is an online visualization app to represent nodes and links on a map for Freifunk open mesh network.
 
+## About this fork
+
+This is a fork of the original FFRGB Meshviewer with a more community friendly development model.
+
+Changelog from the original development:
+* externalized config to decouple development from community configuration
+* embedding in IFrame with working deep-links in both directions (cross-domain, using postMessage)
+* available as docker container
+* support for hardware images (like hopglass)
+* much better handling for wrong/missing data in json
+* better router regexp that allows alphanumeric node ids (not limited to exactly 12 hex digits anymore)
+
+
 ## Running with Docker
 
 * copy the example config and modify it to your needs
