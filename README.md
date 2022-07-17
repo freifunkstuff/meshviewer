@@ -16,6 +16,7 @@ Changelog from the original development:
 * much better handling for wrong/missing data in json
 * better router regexp that allows alphanumeric node ids (not limited to exactly 12 hex digits anymore)
 * Number of clients in local cloud (like in hopglass)
+* Extra style for nodes with uplink
 
 
 ## Running with Docker

@@ -112,7 +112,15 @@ module.exports = function () {
       },
       'online': {
         'color': '#1566A9',
-        'fillColor': '#1566A9'
+        'fillColor': '#1566A9',
+        'radius': 8,
+        'stroke': false
+      },
+      'online.uplink': {
+        'fillColor': '#FFFFFF',
+        'stroke': true,
+        'radius': 6,
+        'weight': 10
       },
       'offline': {
         'color': '#D43E2A',
@@ -132,6 +140,11 @@ module.exports = function () {
       'new': {
         'color': '#1566A9',
         'fillColor': '#93E929'
+      },
+      'new.uplink': {
+        'stroke': true,
+        'radius': 6,
+        'weight': 10
       }
     },
     'client': {
